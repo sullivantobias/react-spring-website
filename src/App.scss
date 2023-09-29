@@ -1,0 +1,251 @@
+.App {
+  display: flex;
+  height: 100vh;
+  background: #2D2926;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__videoWrapper {
+    min-height: 700px;
+    position: relative;
+    opacity: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &--scroll {
+      z-index: 2;
+      position: absolute;
+      left: 100px;
+      bottom: 100px;
+    }
+    
+    &--button {
+      z-index: 2;
+      position: absolute;
+      bottom: 100px;
+      background-color: #2D2926;
+      background-color: #2D2926;
+      color: #EBEBEB;
+      padding: 6.09px 21px 12px 14px;
+      border: none;
+      border-radius: 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+
+      span {
+        border: 2px solid white;
+        position: absolute;
+        right: 6px;
+        bottom: 5px;
+        left: -7px;
+        top: -6px;
+      }
+    }
+
+    &--title {
+      font-size: 124px;
+      line-height: 1.4em;
+      position: relative;
+      color: #EBEBEB;
+      font-weight: 700;
+      margin-bottom: 0;
+      min-height: 192px;
+      text-align: center;
+      -webkit-text-stroke: 2px #EBEBEB;
+      z-index: 2;
+
+      h1 {
+        font-size: 124px;
+        line-height: 1.4em;
+        line-height: 0.9em;
+        color: #EBEBEB;
+        font-weight: 700;
+        margin-bottom: 0;
+        text-align: center;
+        transition: all .75s ease;
+      }
+
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 75px;
+        left: 0;
+        height: 47px;
+        line-height: 0.2;
+        width: 100%;
+        opacity: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+      }
+
+      &::after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        height: 47px;
+        line-height: 0.2;
+        width: 100%;
+        opacity: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__univers {
+    background: url("https://arkose.com/file/global~bg-noir.jpg") no-repeat center top/cover;
+    overflow: hidden;
+    padding: 100px 50px 130px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &--title {
+      font-size: 64px;
+      line-height: 1.4em;
+      color: #EBEBEB;
+      font-weight: 700;
+      line-height: 1em;
+      margin-bottom: 84px;
+      max-width: 60%;
+      text-transform: uppercase;
+    }
+
+    &--content {
+     display: flex;
+     width: 100%;
+    }
+
+    &--rightPanel {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     height: 600px;
+     flex-basis: 70%;
+     cursor: pointer;
+
+     .Logo {
+        height: 50px;
+        width: 200px;
+     }
+    }
+  }
+
+  &__find {
+    background: url('https://arkose.com/file/global_home~bg-lofts-default.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      background: url('https://arkose.com/file/global_home~ripped-paper.png') center;
+      content: "";
+      position: absolute;
+      top: -38px;
+      left: 0;
+      right: 0;
+      height: 84.93px;
+      z-index: 2;
+    }
+
+    &::after {
+      background: linear-gradient(90deg, rgba(0,0,0,0.5) 27.6%, rgba(0,0,0,0) 100%);
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &__images {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 80px;
+      z-index: 3;
+    }
+    
+    h2 {
+      font-size: 64px;
+      line-height: 1.4em;
+      line-height: 1em;
+      font-weight: 600;
+      -webkit-text-fill-color: #EBEBEB;
+      -webkit-text-stroke: 2px transparent;
+      margin-bottom: 0;
+      padding: 14px 0 20px;
+      flex-basis: 100%;
+      text-align: center;
+      z-index: 3;
+      margin-bottom: 50px;
+    } 
+  }
+  
+  &__enterButton {
+    margin-top: 50vh;
+  }
+}
+
+.kl-text-control-link {
+    font-size: 38px;
+    line-height: 1.4em;
+    color: transparent;
+    font-family: "roc-grotesk-wide",sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-text-stroke: 0.5px rgba(235,235,235,0.6);
+    -webkit-background-clip: text;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: none;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover,  &.is-active {
+      color: white;
+    }
+}
+
+.kl-about-control {
+  flex-basis: 30%;
+}
+
+.kl-footer-bottom {
+  background: url("https://arkose.com/file/global~bg-violet.jpg") no-repeat center top/cover;
+  text-align: center;
+  padding: 38px 15px 43px;
+}
+
+.kl-logo-footer {
+  margin-bottom: 23px;
+  max-width: 100%;
+  height: auto;
+}
+
+.kl-copyright {
+  font-size: 14px;
+  line-height: 1.4em;
+  color: #EBEBEB;
+
+  a {
+    color: #EBEBEB;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

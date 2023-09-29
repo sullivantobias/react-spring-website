@@ -1,0 +1,37 @@
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    z-index: 10;
+    background: linear-gradient(180deg, #2D2A26 0%, rgba(45,42,38,0) 100%);
+
+    header {
+        display: flex;
+    }
+
+    &__logo {
+       height: 50px;
+       margin-right: 30px;
+      }
+
+    &__clock {
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        opacity: 0;
+        display: none;
+      }
+
+      &__menu {
+        opacity: 0;
+        display: none;
+        cursor: pointer;
+      }
+}
